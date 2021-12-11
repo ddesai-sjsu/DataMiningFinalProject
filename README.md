@@ -55,7 +55,7 @@ Used label encoders to convert categorical values to numeric values. Following l
 
 * After converting we dumped the label encoders using pickle to use it in our Django App.
 
-**Feature Extraction**
+**Feature Extraction:**
 
 *Certified LCA*
 
@@ -72,18 +72,34 @@ We have deduced this by adding another feature "multiplier", which is used in th
 EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
 
 *Case Status v/s Number of Petitions*
+
 ![](images/1.png)
+
+*Row Counts v/s Case Status*
+
+![](images/2.png)
+
+*The top 15 employers filing the H1-B visa petitions*
+
+![](images/3.png)
+
+*Top 15 SOC codes for which H1-B visas are raised*
+
+![](images/4.png)
+
 
 **Train - Test Split Data:** 
 
 Following is the list of metrics those are used to evaluate classification ML model:
 
-Confusion matrix
-Precision
-Recall
-F1 score
-ROC and AUC curve
-Accuracy
+* Confusion matrix
+* Precision
+* Recall
+* F1 score
+* ROC and AUC curve
+* Accuracy
+
+and there are few more but out of which we considered the accuracy and training time.
 
 ## Experiments and Result:
 
