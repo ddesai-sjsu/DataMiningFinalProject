@@ -4,7 +4,7 @@
 
 **Video Link:**
 
-**SlideShare Link:**
+**SlideShare Link:** https://www.slideshare.net/AnanthUpadhya/h1b-visa-prediction
 
 **IEEE Paper Link:**
 
