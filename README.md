@@ -6,7 +6,7 @@
 
 **SlideShare Link:** https://www.slideshare.net/AnanthUpadhya/h1b-visa-prediction
 
-**IEEE Paper Link:**
+**IEEE Paper Link:** https://docs.google.com/document/d/1fu20KGxa105CMJLCGxIZQZ-fTD0oTteG/edit
 
 
 ## Introduction
