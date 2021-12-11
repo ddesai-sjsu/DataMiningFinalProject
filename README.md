@@ -31,6 +31,8 @@ employer, as defined by USCIS.
 
 **Data acquisition:**
 
+ ![](images/Graph.png)
+
 We performed following steps such as:
 Filter only the required columns into the dataframe, which will be our input to the model.
 Checked any null values present in the records.
@@ -63,7 +65,7 @@ ROC and AUC curve
 Accuracy
 
 
-Result of Preprocessing Data:
+# Result of Preprocessing Data:
 
 In our model Nearest Neighbor Classifier out performed as compared to rest of the classifier and gives the accuracy of 99.2.
 
