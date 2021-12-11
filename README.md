@@ -57,9 +57,11 @@ Used label encoders to convert categorical values to numeric values. Following l
 
 **Feature Extraction**
 
-**Certified LCA**
-**Rejected LCA**
-**Total_Wage**
+*Certified LCA*
+
+*Rejected LCA*
+
+*Total_Wage*
 
 The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
 
@@ -69,6 +71,8 @@ We have deduced this by adding another feature "multiplier", which is used in th
 
 EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
 
+*Case Status v/s Number of Petitions*
+![](images/1.png)
 
 **Train - Test Split Data:** 
 
