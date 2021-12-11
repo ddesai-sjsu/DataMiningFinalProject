@@ -1,6 +1,12 @@
-# H1B LCA Status Prediction
+# H-1B LCA Status Prediction
 
-Colab Link: https://colab.research.google.com/drive/13n7u4Ojcz0fLXtOGAEAJyu7Q9LTU3OCb?usp=sharing
+**Colab Link**: https://colab.research.google.com/drive/13n7u4Ojcz0fLXtOGAEAJyu7Q9LTU3OCb?usp=sharing
+
+**Video Link**:
+
+**SlideShare Link**:
+
+**IEEE Paper Link**:
 
 
 ## Introduction
@@ -23,7 +29,7 @@ as defined by USCIS.
 employer, as defined by USCIS.
 
 
-# Method
+# Methods:
 
 **ML Pipeline:**
 
@@ -32,25 +38,29 @@ employer, as defined by USCIS.
 **Data acquisition:**
 
  ![](images/Graph.png)
+ 
+ 
+**Data Preprocessing:**
 
-We performed following steps such as:
-Filter only the required columns into the dataframe, which will be our input to the model.
-Checked any null values present in the records.
-Converting categorical values of fields WILLFUL_VIOLATOR, SUPPORT_H1B,  H1B_DEPENDENT etc, into numerical values for the model training. Also replacing null values with the majority entries.
+*We performed following steps such as:*
+* Filter only the required columns into the dataframe, which will be our input to the model.
+* Checked any null values present in the records.
+* Converting categorical values of fields WILLFUL_VIOLATOR, SUPPORT_H1B,  H1B_DEPENDENT etc, into numerical values for the model training. Also replacing null values with the majority entries.
 
 **Label Encoding:**
 
-After converting we dumped the label encoders using pickle to use it in our Django App.
+* After converting we dumped the label encoders using pickle to use it in our Django App.
 
 **Feature Extraction and EDA**
 
-The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
+* The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
 
-We have deduced this by adding another feature "multiplier", which is used in the formula (df.PREVAILING_WAGE_int)*df.multiplier to calculate Total_Wage.
+* We have deduced this by adding another feature "multiplier", which is used in the formula (df.PREVAILING_WAGE_int)*df.multiplier to calculate Total_Wage.
 
-**Exploratory Data Analysis(EDA) and visualization:**
+# **Exploratory Data Analysis(EDA) and visualization:**
 
-EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
+* EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
+
 
 
 # Train - Test Split Data: 
