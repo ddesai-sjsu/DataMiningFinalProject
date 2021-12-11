@@ -29,17 +29,17 @@ as defined by USCIS.
 employer, as defined by USCIS.
 
 
-# Method
+## Method
 
-**ML Pipeline:**
+### ML Pipeline:
 
  ![](images/model.png)
 
-**Data acquisition:**
+### Data acquisition:
 
 The ability of any ML model is based on the data it was trained on, larger, cleaner, annotated and appropriate data we have better the accuracy of the model we will have.
  
-**Data Pre-processing:**
+### Data Pre-processing:
 
 * We performed following steps such as:
 
@@ -47,50 +47,54 @@ The ability of any ML model is based on the data it was trained on, larger, clea
 * Checked any null values present in the records.
 * Converting categorical values of fields WILLFUL_VIOLATOR, SUPPORT_H1B,  H1B_DEPENDENT etc, into numerical values for the model training. Also replacing null values with the majority entries.
 
-**Label Encoding:**
+### Label Encoding:
 
-Used label encoders to convert categorical values to numeric values. Following label values are converted to numeric.
+* Used label encoders to convert categorical values to numeric values. Following label values are converted to numeric.
 
 ![](images/le.png)
 
 * After converting we dumped the label encoders using pickle to use it in our Django App.
 
-**Feature Extraction:**
+### Feature Extraction:
 
-*Certified LCA*
+ **Certified LCA**
 
-*Rejected LCA*
+ **Rejected LCA**
 
-*Total_Wage*
+ **Total_Wage**
 
 The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
 
 We have deduced this by adding another feature "multiplier", which is used in the formula (df.PREVAILING_WAGE_int)*df.multiplier to calculate Total_Wage.
 
-**Exploratory Data Analysis(EDA) and visualization:**
+### Exploratory Data Analysis(EDA) and visualization:
 
 EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
 
-*Case Status v/s Number of Petitions*
+**Case Status v/s Number of Petitions**
 
 ![](images/1.png)
 
-*Row Counts v/s Case Status*
+**Row Counts v/s Case Status**
 
 ![](images/2.png)
 
-*The top 15 employers filing the H1-B visa petitions*
+**The top 15 employers filing the H1-B visa petitions**
 
 ![](images/3.png)
 
-*Top 15 SOC codes for which H1-B visas are raised*
+**Top 15 SOC codes for which H1-B visas are raised**
 
 ![](images/4.png)
 
 
-**Train - Test Split Data:** 
+### Train - Test Split Data:
 
-Following is the list of metrics those are used to evaluate classification ML model:
+* Before applying the dataset, it has to be split into training and testing dataset. The training part will be used to train the model and the testing part will be used to test how well the trained model predicts. Both training and testing data is also known as seen and unseen data respectively.
+
+* Once the training of the model is completed we need to evaluate our trained model based on some metric. So what are those metrics?
+
+* Following is the list of metrics those are used to evaluate classification ML model:
 
 * Confusion matrix
 * Precision
@@ -101,7 +105,7 @@ Following is the list of metrics those are used to evaluate classification ML mo
 
 and there are few more but out of which we considered the accuracy and training time.
 
-## Experiments and Result:
+### Experiments and Result:
 
 **Result of Preprocessing Data:**
 
