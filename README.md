@@ -64,9 +64,27 @@ F1 score
 ROC and AUC curve
 Accuracy
 
+# Result and Evalution:
 
-# Result of Preprocessing Data:
+## Result of Preprocessing Data:
 
 In our model Nearest Neighbor Classifier out performed as compared to rest of the classifier and gives the accuracy of 99.2.
 
  ![](images/output.png)
+ 
+ 
+## Result of Upsampling Data:
+![]()
+
+Upsampling is a procedure where synthetically generated data points (corresponding to minority class) are injected into the dataset.
+
+After this step, the counts of both the labels(certified LCA and rejected LCA) are almost the same. This equalization procedure prevents the model from inclining towards the majority class i.e. in our case it was certified LCA.
+
+As a result of this experiment Nearest Neighbor Classifier out performed as compared to rest of the classifier and gives the accuracy of 99.2.
+
+
+## Result of Downsampling Data:
+
+![]()
+
+The highest acuuracy after downsampling was  67.5 for the classifier Adaboost, which is far less than what we achieved with upsampled data. Since the downsampled size was very less, the result given by the model was very biased. Hence we decided to not take downsampled model
