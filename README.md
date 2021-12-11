@@ -27,6 +27,8 @@ employer, as defined by USCIS.
 
 **ML Pipeline:**
 
+ ![](images/model.png)
+
 **Data acquisition:**
 
 We performed following steps such as:
@@ -65,3 +67,4 @@ Result of Preprocessing Data:
 
 In our model Nearest Neighbor Classifier out performed as compared to rest of the classifier and gives the accuracy of 99.2.
 
+ ![](images/output.png)
