@@ -8,6 +8,12 @@
 
 **IEEE Paper Link:** https://docs.google.com/document/d/1fu20KGxa105CMJLCGxIZQZ-fTD0oTteG/edit
 
+**Website Link:** http://34.207.67.165:8000/h1bpredictor/
+
+## Commands to run the django app in local
+
+1. pip3 install -r requirements.txt
+2. python3 manage.py runserver
 
 ## Introduction
 
