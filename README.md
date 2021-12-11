@@ -2,7 +2,7 @@
 
 **Colab Link:** https://colab.research.google.com/drive/13n7u4Ojcz0fLXtOGAEAJyu7Q9LTU3OCb?usp=sharing
 
-**Video Link:**
+**Video Link:** https://drive.google.com/file/d/1h37dbnEyN2gFFxuupaGjg_FYc7BE0ZAF/view?usp=sharing
 
 **SlideShare Link:** https://www.slideshare.net/AnanthUpadhya/h1b-visa-prediction
 
