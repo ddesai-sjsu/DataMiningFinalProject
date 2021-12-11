@@ -136,4 +136,7 @@ The highest acuuracy after downsampling was  67.5 for the classifier Adaboost, w
 
 The applicant's details to be enetred in the web application.
 
-![](images/UI.png)
+![](images/UI1.png)
+
+
+![](images/UI2.png)
