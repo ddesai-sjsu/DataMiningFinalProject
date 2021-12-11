@@ -1,17 +1,11 @@
-# H-1B LCA Status Prediction
+# H1B LCA Status Prediction
 
-**Colab Link**: https://colab.research.google.com/drive/13n7u4Ojcz0fLXtOGAEAJyu7Q9LTU3OCb?usp=sharing
-
-**Video Link**:
-
-**SlideShare Link**:
-
-**IEEE Paper Link**:
+Colab Link: https://colab.research.google.com/drive/13n7u4Ojcz0fLXtOGAEAJyu7Q9LTU3OCb?usp=sharing
 
 
 ## Introduction
 
-H-1B visas are applied by a large number of highly skilled foreign nations seeking employment in the United States, but only a small portion of individuals' visas are approved and allowed to work. The application for the visa is applied to the US embassy.There are various factors that affect the role of prediction for an approval of H-1B visa such as work experience, employer, proficiency, wage and many more. Our proposed model takes into account 16 such factors to predict the outcome of the visa application. We create a web application, which enables user to fill in the apllication details to predict the status of the Visa to be accepted or not.
+H-1B visas are applied by a large number of highly skilled foreign nations seeking employment in the United States, but only a small portion of individuals' visas are approved and allowed to work. The application for the visa is applied to the US embassy.There are various factors that affect the role of prediction for an approval of H-1B visa such as work experience, employer, proficiency, wage and many more. Our proposed model takes into account 16 such factors to predict the outcome of the visa application. We created a web application and deployed it in AWS EC2, which enables user to fill in the apllication details to predict the status of the Visa to be accepted or not.
 
 ## Data
 
@@ -29,7 +23,7 @@ as defined by USCIS.
 employer, as defined by USCIS.
 
 
-# Methods:
+# Method
 
 **ML Pipeline:**
 
@@ -38,29 +32,25 @@ employer, as defined by USCIS.
 **Data acquisition:**
 
  ![](images/Graph.png)
- 
- 
-**Data Preprocessing:**
 
-*We performed following steps such as:*
-* Filter only the required columns into the dataframe, which will be our input to the model.
-* Checked any null values present in the records.
-* Converting categorical values of fields WILLFUL_VIOLATOR, SUPPORT_H1B,  H1B_DEPENDENT etc, into numerical values for the model training. Also replacing null values with the majority entries.
+We performed following steps such as:
+Filter only the required columns into the dataframe, which will be our input to the model.
+Checked any null values present in the records.
+Converting categorical values of fields WILLFUL_VIOLATOR, SUPPORT_H1B,  H1B_DEPENDENT etc, into numerical values for the model training. Also replacing null values with the majority entries.
 
 **Label Encoding:**
 
-* After converting we dumped the label encoders using pickle to use it in our Django App.
+After converting we dumped the label encoders using pickle to use it in our Django App.
 
 **Feature Extraction and EDA**
 
-* The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
+The dataset includes PREVAILING_WAGE_int which specifies the wage of the applicant Yearly, Hourly, Monthly Weekly & Biweekly. This occurrence of payment is given. by field WAGE_UNIT_OF_PAY. As it is difficult to use wages with different occurrences for the different employees, we have added a feature "Total_Wage", which specifies the annual income of the applicant.
 
-* We have deduced this by adding another feature "multiplier", which is used in the formula (df.PREVAILING_WAGE_int)*df.multiplier to calculate Total_Wage.
+We have deduced this by adding another feature "multiplier", which is used in the formula (df.PREVAILING_WAGE_int)*df.multiplier to calculate Total_Wage.
 
-# **Exploratory Data Analysis(EDA) and visualization:**
+**Exploratory Data Analysis(EDA) and visualization:**
 
-* EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
-
+EDA is another crucial step which helps us to understand how data distribution looks like. It helps to understand the weight of features visually. There are many open source python based visualization libraries to perform EDA such as matplotlib, seaborn etc.
 
 
 # Train - Test Split Data: 
@@ -98,4 +88,11 @@ As a result of this experiment Nearest Neighbor Classifier out performed as comp
 
 ![](images/downsample.png)
 
-The highest acuuracy after downsampling was  67.5 for the classifier Adaboost, which is far less than what we achieved with upsampled data. Since the downsampled size was very less, the result given by the model was very biased. Hence we decided to not take downsampled model
+The highest acuuracy after downsampling was  67.5 for the classifier Adaboost, which is far less than what we achieved with upsampled data. Since the downsampled size was very less, the result given by the model was very biased. Hence we decided to not take downsampled model.
+
+
+## UI ScreenShot
+
+The applicant's details to be enetred in the web application.
+
+![](images/UI.png)
