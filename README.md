@@ -140,3 +140,8 @@ The applicant's details to be enetred in the web application.
 
 
 ![](images/UI2.png)
+
+**AWS Deployment**
+The application was deployed on EC2 machine and the necessary ports were opened for communication with the external world.
+
+![](images/AWS_Deployment.JPG)
